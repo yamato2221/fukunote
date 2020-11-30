@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="form">
+        <h1 class="heading">マイページ編集</h1>
+        <%= form_tag("/users/#{@user.id}/update") do %>
+        <div class="form-body">
+            <% if @error_message %>
+                <div class="error-message">
+                    <%= @error_message %>
+                </div>
+            <% end %>
+            <p>ユーザー名</p>
+            <input name="name" type="text">
+            <p>メールアドレス</p>
+            <input name="email" type="email">
+            <input type="submit" value="マイページ編集">
+        </div>
+        <% end %>
+    </div>
+</div>

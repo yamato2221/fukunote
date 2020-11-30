@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="form">
+        <h1 class="heading">マイページ</h1>
+        <div class="form-body">
+            <div class="user-show">
+                <h4>ユーザー名:<%= @user.name %></h4>
+                <p>メールアドレス:<%= @user.email %></p>
+                <% if @user.id == @current_user.id %>
+                    <%= link_to("マイページ編集", "/users/#{@user.id}/edit") %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="form">
+        <h1 class="heading">お問い合わせ</h1>
+        <%= form_tag("/contact/create") do %>
+            <div class="form-body">
+                <div class="error-message">
+                    <% if @error_message %>
+                        <%= @error_message %>
+                    <% end %>
+                </div>
+                <p>ユーザー名</p>
+                <input type="text" name="name">
+                <p>メールアドレス</p>
+                <input type="email" name="email">
+                <p>お問い合わせ内容</p>
+                <textarea name="content"></textarea><br>
+                <input type="submit" value="送信">
+            </div>
+        <% end %>
+    </div>
+</div>

@@ -1,0 +1,210 @@
+/* applicationの共通layout */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+body {
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+}
+
+.header-menus,li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* ヘッダー */
+
+header {
+    height: 64px;
+    position: absolute;
+    width: 100%;
+    background-color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+.header-logo {
+    float: left;
+    padding-top: 15px;
+    padding-left: 20px;
+    color: white;
+}
+
+.header-logo a {
+    color: white;
+    
+}
+
+.header-menus {
+    float: right;
+    padding-top: 25px;
+}
+
+.header-menus li {
+    float: left;
+    color: white;
+    padding: 0 10px;
+    background-color: #333333;
+}
+
+.header-menus a {
+    float: left;
+    color: white;
+    background-color: #333333;
+}
+
+/* 共通レイアウト */
+.container-fluid a {
+    text-decoration: none;
+}
+
+/* form 共通レイアウト */
+
+.form {
+    margin: 100px 10% 0 10%;
+}
+
+.heading {
+    font-weight: bold;
+    font-size: 50px;
+    color: #333333;
+}
+
+.form-body textarea{
+    width: 100%;
+    max-width: 700px;
+    min-height: 250px;
+    font-size: 20px;
+    background-color: white;
+    border: 1px solid #333333;
+    border-radius: 5px;
+}
+
+.form-body input{
+    width: 100%;
+    max-width: 700px;
+    line-height: 40px;
+    margin: 10px 10px 10px 0;
+}
+
+.form-body input[type="submit"] {
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+    margin-bottom: 100px;
+}
+
+/*　トップページ　*/
+.container-fluid {
+    position: absolute;
+    top: 114px;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.home-left, .home-right {
+    width: 100%;
+    background-color: #F5F5F5;
+    margin-top: 40px;
+}
+
+.home-left-item input[type="search"] {
+    width: 100%;
+    max-width: 250px;
+    height: 30px;
+}
+
+.home-left-item input[type="submit"] {
+    width: 50px;
+    height: 30px;
+}
+
+.home-left-content, .home-right-content {
+    margin: 10px 0px;
+    padding: 0 10px;
+    background-color: white;
+    line-height: 30px;
+    border: 1px solid #FFF5EE;
+    border-radius: 5px;
+}
+
+.home-left-content h6 {
+    font-weight: 600;
+}
+
+.home-left-content p {
+    white-space: pre-wrap;
+}
+
+.home-right-content {
+    margin-top: 39px;
+}
+
+/* とりあえずのフッダーもどき */
+
+.home-left-item {
+    padding-top: 50px;
+    position: relative;
+}
+
+.menus {
+    float: right;
+    position: absolute;
+    top: 0;
+    left: -50px;
+}
+
+.menus li {
+    float: left;
+    padding: 0 10px;
+    color: #444444;
+}
+
+.menus a {
+    padding: 0 10px;
+    float: left;
+    color: #444444;
+}
+
+/*  homes/privacy */
+
+.form-body-privacy {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 100px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+
+
+/* flash[:notice] */
+
+.flash {
+    width: 100%;
+    height: 40px;
+    color: black;
+    background-color: #AAFFFF;
+    position: relative;
+    top: 114px;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* エラーメッセージ */
+.error-message {
+    color: red;
+}

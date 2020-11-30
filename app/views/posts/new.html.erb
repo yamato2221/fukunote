@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="form">
+        <h1 class="heading">新規投稿</h1>
+        <%= form_tag("/posts/create") do %>
+            <div class="form-body">
+                <% if @error_message %>
+                    <div class="error-message">
+                        <%= @error_message %>
+                    </div>
+                <% end %>
+                <textarea name="content"></textarea><br>
+                <input type="submit" value="投稿">
+            </div>
+        <% end %>
+    </div>
+</div>

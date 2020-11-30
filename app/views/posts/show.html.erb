@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="posts-show">
+        <div class="posts-show-item"> 
+            <h6><%= link_to(@post.user.name) %></h6>
+            <p>
+                <%= @post.content %><br><br><%= @post.created_at.strftime("%Y/%M/%D %H:%M") %>
+                <span>
+                    <% if @post.user_id == @current_user.id %>
+                        <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+                        <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+                    <% end %>
+                </span>
+            </p>
+        </div>
+    </div>
+</div>

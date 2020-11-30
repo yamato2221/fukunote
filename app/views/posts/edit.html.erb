@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <div class="posts-edit">
+        <h1 class="heading">編集</h1>
+        <%= form_tag("/posts/#{@post.id}/update") do %>
+        <div class="posts-edit-item">
+            <textarea name="content"><%= @post.content %></textarea>
+        </div>
+        <input type="submit" value="保存">
+        <% end %>
+    </div>
+</div>

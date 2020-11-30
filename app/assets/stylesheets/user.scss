@@ -1,0 +1,64 @@
+/*  /signup */
+.error-message {
+    color: red;
+}
+
+
+
+.terms {
+    width: 100%;
+    max-width: 700px;
+    margin: 10px 0 40px 10px;
+    height: 250px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #CCCCCc;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+
+.terms span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.agreement-box {
+    margin-left: 10px;
+    width: 100%;
+    max-width: 700px;
+    height: 30px;
+    position: relative;
+    letter-spacing: 1vw;
+}
+
+.agreement-box input[type="checkbox"] {
+    position: absolute;
+    top: -4.5px;
+    right: 22.5%;
+    bottom: 0;
+}
+
+
+
+/*  /login */
+
+/* /users/:id */
+.user-show {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    min-height: 180px;
+    padding: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.user-show p {
+    font-size: 20px;
+}
+
+.user-show a {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

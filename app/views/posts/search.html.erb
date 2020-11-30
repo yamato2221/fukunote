@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="main-left col-md-12">
+            <div class="home-right">
+                <div class="home-right-item">
+                    <div class="home-right-content">
+                        <h5>この服note.というサービスは主に"ZOZOTOWN"などのオンラインショップの商品を心配せずに買うためのレビュー掲示板です！<br><br>
+                            とくに、"ZOZOTOWN"は商品のレビューがありません。YouTubeやブログでレビューされている商品もごくわずかです。<br><br>
+                            そこで、みんなで商品のレビューを書いて、オンラインショップの商品を１つのノートにしたら、これからは心配せずにオンラインショップで洋服が買えるんじゃないかと思いました！<br><br>
+                            みんなの本音の意見で、力を合わせて服note.を充実させましょう！
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-center col-md-1">
+        </div>
+        <div class="main-right col-md-12">
+            <div class="home-left">
+                <div class="home-left-item">
+                    <div class="menus">
+                        <ul>
+                            <li>
+                                <%= link_to("プライバシー・ポリシー", "/homes/privacy") %>
+                            </li>
+                            <li>
+                                <%= link_to("お問い合わせ", "/contact/form") %>
+                            </li>
+                        </ul>
+                    </div>
+                    <%= form_tag("/posts/search", {method: :get}) do %>
+                        <input type="search" name="search" placeholder="検索">
+                        <input type="submit" value="検索">
+                    <% end %>
+                    <% @posts.each do |post| %>
+                        <div class="home-left-content">
+                            <h6><%= link_to(post.user.name) %></h6>
+                            <p><%= link_to(post.content, "/posts/#{post.id}") %><br><%= post.created_at.strftime("%Y/%m/%d %H:%M") %></p>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+        </div>
+    </div>
+</div>
